@@ -1,0 +1,27 @@
+#:kivy 2.0.0
+
+#: include 'screens\starting_screen.kv'
+#: include 'screens\main_screen.kv'
+#: include 'screens\event_screen.kv'
+
+<Lbl@Label>:
+    size_hint: None, None
+    bold: True
+    color: [1,1,1,1]
+    size: self.texture_size
+    font_size: '25sp'
+
+
+FloatLayout:
+    WindowManager:
+        id: screen_manager
+        Starting:
+            name: 'start_screen'
+            id: start_screen
+        Main:
+            name: 'main_screen'
+            id: main_screen
+        Event:
+            name: 'event_screen'
+            id: event_screen
+            
